@@ -12,6 +12,7 @@
   <title>Karak Ghori · Staff Orders</title>
   <script defer src="cloud-config.js"></script>
   <script defer src="app.js"></script>
+  <script defer src="notifications.js"></script>
 </head>
 <body>
   <main class="shell">
@@ -39,7 +40,7 @@
     <section id="orders-view" hidden>
       <div class="page-heading">
         <div><p class="eyebrow">LIVE ORDER INBOX</p><h1>Customer orders</h1></div>
-        <button id="refresh-button" class="secondary-button" type="button">Refresh</button>
+        <div><button id="refresh-button" class="secondary-button" type="button">Refresh</button></div>
       </div>
       <p class="muted">Customer requests are not confirmed orders. Verify availability, prices, and any delivery charge with the customer.</p>
       <p id="connection-status" class="notice" role="status" aria-live="polite"></p>
