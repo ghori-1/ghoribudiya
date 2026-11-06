@@ -65,7 +65,7 @@ const ui = {
     cartTitle: 'سلتك', selectedOne: 'صنف واحد.', selectedMany: 'أصناف.',
     emptyCart: 'سلتك فارغة', emptyCartHint: 'تصفّح القائمة واضغط + على ما ترغب به.', browseMenu: 'تصفّح القائمة',
     orderSummary: 'ملخص الطلب', items: 'الأصناف', pickupDelivery: 'الاستلام / التوصيل', chooseLater: 'يُحدّد لاحقًا', total: 'مجموع الأصناف',
-    checkout: 'إتمام الطلب عبر واتساب', checkoutNote: 'سيُرسل طلبك بأمان إلى الموظفين وسيفتح واتساب بنسخة منه. المبلغ المعروض للأصناف فقط؛ ويؤكد الموظفون أي رسوم توصيل والتوفر والطلب.',
+    checkout: 'إتمام الطلب عبر واتساب', checkoutNote: 'سيُرسل طلبك بأمان إلى الموظفين وسيفتح واتساب بنسخة منه. المبلغ shown is for menu items only; staff will confirm any delivery charge, availability, and the order.',
     remove: 'حذف', qty: 'الكمية', continueOrder: 'متابعة الطلب',
     checkoutTitle: 'إرسال طلب', customerName: 'اسمك', customerPhone: 'رقم هاتفك (اختياري)',
     orderMethod: 'طريقة الطلب', pickup: 'استلام من الفرع', delivery: 'توصيل', dineIn: 'تناول في المطعم', address: 'عنوان التوصيل',
@@ -104,22 +104,22 @@ const ui = {
 };
 
 const itemTranslations = {
-  zinker: { name: 'زينكر سوبريم', subtitle: 'دجاج مقرمش وبيكون وصلصة مميزة', category: 'ساندويتش · دجاج', tagline: 'الأكثر مبيعًا هذا الأسبوع', about: 'فيليه دجاج مقرمش مع بيكون مدخن وبصل أحمر وخس وصلصتنا الكريمية المميزة داخل خبز طري محمّص.', tags: ['دجاج', 'بيكون', 'حار'], badge: 'الأكثر مبيعًا' },
-  falooda: { name: 'فالوودة جادباد', subtitle: 'طبقات من الفاكهة والجيلي والآيس كريم', category: 'حلوى · بارد', tagline: 'باردة وغنية بالطبقات', about: 'فالوودة بطبقات من الشعيرية وبذور الريحان والجيلي والفاكهة الطازجة، مع الآيس كريم والفستق.', tags: ['آيس كريم', 'فاكهة', 'بارد'], badge: 'جديد' },
-  samosa: { name: 'سمبوسة بالجبن', subtitle: 'ذهبية ومقرمشة وتُقلى طازجة', category: 'وجبات خفيفة · ساخن', tagline: 'تُقلى عند الطلب', about: 'سمبوسة ذهبية مقرمشة تُقلى عند الطلب وتُقدّم ساخنة مع صلصة الفلفل الحلو وصلصة الطماطم.', tags: ['مقرمش', 'صلصتان', 'ساخن'], badge: 'طازج' },
-  hotdog_bacon: { name: 'هوت دوغ بالبيكون', subtitle: 'محشو بالجبن والبيكون المقرمش', category: 'هوت دوغ · لحم بقري', tagline: 'غني بالجبن الذائب', about: 'نقانق مشوية داخل خبز محمّص مع صلصة الجبن الذائب وقطع البيكون المقرمشة.', tags: ['لحم بقري', 'جبن', 'بيكون'] },
-  chicken_wrap: { name: 'راب الدجاج', subtitle: 'دجاج مقرمش وطماطم وجبن', category: 'راب · دجاج', tagline: 'محمّص ومقرمش', about: 'شرائح دجاج مقرمشة وجبن ذائب وخس وطماطم داخل خبز تورتيلا محمّص.', tags: ['دجاج', 'جبن', 'محمّص'] },
-  mango_ghori: { name: 'مانجو غوري', subtitle: 'مكعبات مانجو ورمان ومكسرات', category: 'مشروب · بارد', tagline: 'المشروب البارد رقم ١', about: 'مخفوق مانجو كثيف يُزيّن بقطع المانجو الطازجة والرمان والمكسرات المقرمشة.', tags: ['مانجو', 'بارد', 'مكسرات'], badge: 'جديد' },
-  paratha: { name: 'براتا طبقات', subtitle: 'هشة وذهبية وغنية بالزبدة', category: 'مخبوزات · ساخن', tagline: 'طازجة من الصاج', about: 'براتا يدوية متعددة الطبقات تُطهى على الصاج حتى تصبح ذهبية.', tags: ['هش', 'ساخن'] },
-  tenders: { name: 'أصابع دجاج', subtitle: 'شرائح مقرمشة مع البطاطس والصلصات', category: 'وجبات · دجاج', tagline: 'قرمشة في كل لقمة', about: 'أصابع دجاج مغطاة بالبقسماط ومقرمشة، تُقدّم مع البطاطس ومايونيز الثوم وصلصة الفلفل الأخضر.', tags: ['دجاج', 'بطاطس', 'صلصتان'] },
-  sliders: { name: 'برغر صغير', subtitle: 'قطعة لحم بقري وجبن وطماطم', category: 'برغر · لحم بقري', tagline: 'طبق للمشاركة', about: 'قطع برغر صغيرة من اللحم البقري مع الجبن والطماطم والخس داخل خبز بالسمسم.', tags: ['لحم بقري', 'جبن'] },
-  club: { name: 'ساندويتش كلوب', subtitle: 'ثلاث طبقات مع البطاطس', category: 'ساندويتش · كلاسيكي', tagline: 'كلاسيكي وغني', about: 'ساندويتش كلوب بثلاث طبقات من الديك الرومي والخس والطماطم، يُقدّم مع بطاطس متبّلة.', tags: ['لحم', 'ديك رومي', 'بطاطس'] },
-  panini: { name: 'بانيني برغر مشوي', subtitle: 'لحم بقري وشيدر وجرجير', category: 'ساندويتش · لحم بقري', tagline: 'مشوي ومضغوط', about: 'قطعة برغر من اللحم البقري مع شيدر ذائب وطماطم وجرجير، تُضغط على الشواية.', tags: ['لحم بقري', 'شيدر'] },
-  breakfast_wrap: { name: 'راب الإفطار', subtitle: 'بيض مخفوق وبيكون مقرمش', category: 'إفطار · راب', tagline: 'ابدأ يومك بنشاط', about: 'بيض مخفوق طري وبيكون مقرمش ملفوف داخل خبز تورتيلا محمّص.', tags: ['بيض', 'بيكون'] },
-  hotdog: { name: 'هوت دوغ كلاسيكي', subtitle: 'خردل وخس وبطاطس', category: 'هوت دوغ · كلاسيكي', tagline: 'بسيط ولذيذ', about: 'هوت دوغ كلاسيكي مع الخس والخردل، يُقدّم مع بطاطس ذهبية.', tags: ['كلاسيكي', 'بطاطس'] },
-  smoothies: { name: 'سموذي طازج', subtitle: 'خمسة نكهات فاكهة', category: 'مشروب · بارد', tagline: 'اختر نكهتك', about: 'مشروب مخفوق طازج من الفاكهة الحقيقية ومزيّن بشرائح الفاكهة.', tags: ['فاكهة', 'بارد'] },
-  smoothie_jars: { name: 'سموذي في برطمان', subtitle: 'توت ومانجو وأخضر والمزيد', category: 'مشروب · بارد', tagline: 'برطمان من الانتعاش', about: 'سموذي كثيف يُقدّم في برطمان مع شفاطة ورقية.', tags: ['توت', 'مانجو'] },
-  drinks_collage: { name: 'كرك ومشروبات باردة', subtitle: 'كرك ساخن ومشروبات مثلجة', category: 'مشروب · شاي', tagline: 'نكهة البيت المميزة', about: 'شاي كركنا المميز مع أكواب الفالوودة ومشروبات الليمون الباردة.', tags: ['كرك', 'مشروب بارد'], badge: 'جديد' },
+  zinker: { name: 'زينكر سوبريم', subtitle: 'دجاج مقرمش وبيكون وصلصة مميزة', category: 'ساندويتش · دجاج', tagline: 'الأكثر مبيعًا هذا الأسبوع', about: 'شرائح دجاج مقرمشة مع بيكون وصلصة خاصة.', tags: ['دجاج', 'مقرمش', 'مميز'], badge: 'الأكثر مبيعًا' },
+  falooda: { name: 'فالوودة جادباد', subtitle: 'طبقات من الفاكهة والجيلي والآيس كريم', category: 'حلوى · بارد', tagline: 'باردة وغنية', about: 'خليط منعش من الفاكهة والجيلي والآيس كريم.', tags: ['حلوى', 'بارد', 'فاكهة'], badge: 'مميز' },
+  samosa: { name: 'سمبوسة بالجبن', subtitle: 'ذهبية ومقرمشة وتُقلى طازجة', category: 'وجبات خفيفة · ساخن', tagline: 'تُقلى عند الطلب', about: 'سمبوسة بالجبن المقرمش وطازج.', tags: ['سمبوسة', 'جبن', 'مقرمش'], badge: 'مشهورة' },
+  hotdog_bacon: { name: 'هوت دوغ بالبيكون', subtitle: 'محشو بالجبن والبيكون المقرمش', category: 'هوت دوغ · لحم بقري', tagline: 'غني ومشبَع', about: 'هوت دوغ به لحم بقري وبيكون وجبن.', tags: ['هوت دوغ', 'بيكون', 'جبن'], badge: 'قوي' },
+  chicken_wrap: { name: 'راب الدجاج', subtitle: 'دجاج مقرمش وطماطم وجبن', category: 'راب · دجاج', tagline: 'محمّص ومقرمش', about: 'راب دجاج مقرمش مع طماطم وجبن.', tags: ['دجاج', 'راب', 'مقرمش'], badge: 'مفضل' },
+  mango_ghori: { name: 'مانجو غوري', subtitle: 'مكعبات مانجو ورمان ومكسرات', category: 'مشروب · بارد', tagline: 'المشروب البارد رقم ١', about: 'مزيج منعش من مانجو ورمان ومكسرات.', tags: ['مانجو', 'بارد', 'منعش'], badge: 'بطل' },
+  paratha: { name: 'براتا طبقات', subtitle: 'هشة وذهبية وغنية بالزبدة', category: 'مخبوزات · ساخن', tagline: 'طازجة من الصاج', about: 'براتا طبقات محمصة بالزبدة.', tags: ['خبز', 'ساخن', 'زبدة'], badge: 'مميز' },
+  tenders: { name: 'أصابع دجاج', subtitle: 'شرائح مقرمشة مع البطاطس والصلصات', category: 'وجبات · دجاج', tagline: 'قرمشة في كل لقمة', about: 'أصابع دجاج مقرمشة مع بطاطس وصلصات.', tags: ['دجاج', 'أصابع', 'مقرمش'], badge: 'محبوب' },
+  sliders: { name: 'برغر صغير', subtitle: 'قطعة لحم بقري وجبن وطماطم', category: 'برغر · لحم بقري', tagline: 'طبق للمشاركة', about: 'برجر صغير بمذاق لحم بقري وجبن.', tags: ['برغر', 'لحم', 'طبق صغير'], badge: 'للأصدقاء' },
+  club: { name: 'ساندويتش كلوب', subtitle: 'ثلاث طبقات مع البطاطس', category: 'ساندويتش · كلاسيكي', tagline: 'كلاسيكي وغني', about: 'ساندويتش ثلاث طبقات مع بطاطس.', tags: ['ساندويتش', 'كلاسيكي', 'غني'], badge: 'كلاسيكي' },
+  panini: { name: 'بانيني برغر مشوي', subtitle: 'لحم بقري وشيدر وجرجير', category: 'ساندويتش · لحم بقري', tagline: 'مشوي ومضغوط', about: 'بانيني لحم بقري مشوي مع شيدر.', tags: ['بانيني', 'لحم', 'مشوي'], badge: 'مميز' },
+  breakfast_wrap: { name: 'راب الإفطار', subtitle: 'بيض مخفوق وبيكون مقرمش', category: 'إفطار · راب', tagline: 'ابدأ يومك بنشاط', about: 'راب إفطار مع بيض وبيكون.', tags: ['إفطار', 'بيض', 'بيكون'], badge: 'منعش' },
+  hotdog: { name: 'هوت دوغ كلاسيكي', subtitle: 'خردل وخس وبطاطس', category: 'هوت دوغ · كلاسيكي', tagline: 'بسيط ولذيذ', about: 'هوت دوغ كلاسيكي مع الخردل والخس.', tags: ['هوت دوغ', 'كلاسيكي', 'خردل'], badge: 'مفضل' },
+  smoothies: { name: 'سموذي طازج', subtitle: 'خمسة نكهات فاكهة', category: 'مشروب · بارد', tagline: 'اختر نكهتك', about: 'سموذي طازج مع خمسة نكهات.', tags: ['سموذي', 'فاكهة', 'طازج'], badge: 'مميز' },
+  smoothie_jars: { name: 'سموذي في برطمان', subtitle: 'توت ومانجو وأخضر والمزيد', category: 'مشروب · بارد', tagline: 'برطمان من الانتعاش', about: 'برطمان بوفيه من الفواكه المنعشة.', tags: ['فاكهة', 'برطمان', 'منعش'], badge: 'منعش' },
+  drinks_collage: { name: 'كرك ومشروبات باردة', subtitle: 'كرك ساخن ومشروبات مثلجة', category: 'مشروب · شاي', tagline: 'نكهة البيت المميزة', about: 'زجاجة كرك غوري ومشروبات باردة.', tags: ['شاي', 'مشروب', 'بارد'], badge: 'مميز' },
 };
 
 const categoryTranslations = {
@@ -135,7 +135,7 @@ function itemText(id, language = 'en') {
   if (itemTranslations[id]) return itemTranslations[id];
   const catalog = typeof module !== 'undefined' && module.exports
     ? require('./catalog.js')
-    : window.KarakGhoriCatalog;
+    : globalThis.KarakGhoriCatalog;
   const item = catalog?.menuItems.find((entry) => entry.id === id);
   return item ? {
     name: item.ar,
@@ -151,11 +151,11 @@ function categoryText(category, language = 'en') {
   if (language !== 'ar') return category;
   const catalog = typeof module !== 'undefined' && module.exports
     ? require('./catalog.js')
-    : window.KarakGhoriCatalog;
+    : globalThis.KarakGhoriCatalog;
   const localized = catalog?.menuCategories.find((entry) => entry.id === category || entry.label === category);
   return localized?.ar || categoryTranslations[category] || category;
 }
 
 const i18nApi = { uiText, itemText, categoryText, itemTranslations };
 if (typeof module !== 'undefined' && module.exports) module.exports = i18nApi;
-if (typeof window !== 'undefined') window.KarakGhoriI18n = i18nApi;
+if (typeof globalThis !== 'undefined') globalThis.KarakGhoriI18n = i18nApi;
