@@ -2,11 +2,13 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#17120f">
   <meta name="description" content="Order from Karak Ghori in Bahrain.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://*.supabase.co; object-src 'none'; base-uri 'self';">
-  <link rel="icon" href="assets/karak-ghori-mark.png" type="image/png">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://*.supabase.co;">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="app-icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/karak-ghori-mark.png">
   <link rel="stylesheet" href="styles.css">
   <title>Karak Ghori | Order Online</title>
   <script defer src="staff/cloud-config.js"></script>
@@ -18,6 +20,7 @@
   <script defer src="menu-image-data.js"></script>
   <script defer src="catalog.js"></script>
   <script defer src="renderer-app.js"></script>
+  <script defer src="pwa-register.js"></script>
 </head>
 <body>
   <div class="app-shell">

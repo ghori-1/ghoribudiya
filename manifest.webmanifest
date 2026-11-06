@@ -1,0 +1,20 @@
+{
+  "id": "karak-ghori-ordering",
+  "name": "Karak Ghori · Order Online",
+  "short_name": "Karak Ghori",
+  "description": "Browse the Karak Ghori menu and prepare pickup or delivery requests.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#17120f",
+  "theme_color": "#17120f",
+  "icons": [
+    {
+      "src": "app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
