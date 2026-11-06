@@ -109,4 +109,4 @@ function advanceStaffOrder(orders, id) {
 
 const staffOrderApi = { statuses, methods, loadStaffOrders, loadStaffDesk, createStaffOrder, advanceStaffOrder };
 if (typeof module !== 'undefined' && module.exports) module.exports = staffOrderApi;
-if (typeof window !== 'undefined') window.KarakGhoriStaffOrders = staffOrderApi;
+if (typeof globalThis !== 'undefined') globalThis.KarakGhoriStaffOrders = staffOrderApi;
