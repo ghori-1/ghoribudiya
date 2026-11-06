@@ -1,6 +1,6 @@
 (() => {
-  const menuData = window.KarakGhoriMenuData;
-  const menuImages = window.KarakGhoriMenuImages;
+  const menuData = globalThis.KarakGhoriMenuData;
+  const menuImages = globalThis.KarakGhoriMenuImages;
 
   if (!menuData || !menuImages) {
     throw new Error('Karak Ghori catalog data did not load. Check menu-data.js and menu-image-data.js.');
@@ -100,5 +100,5 @@
   }
 
   const catalog = Object.freeze({ menuItems, menuCategories, searchItems, addCartItem, setCartQuantity, cartTotal });
-  window.KarakGhoriCatalog = catalog;
+  globalThis.KarakGhoriCatalog = catalog;
 })();
