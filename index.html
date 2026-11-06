@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17120f">
+  <meta name="description" content="Order from Karak Ghori in Bahrain.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://*.supabase.co; object-src 'none'; base-uri 'self';">
+  <link rel="icon" href="assets/karak-ghori-mark.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Karak Ghori | Order Online</title>
+  <script defer src="staff/cloud-config.js"></script>
+  <script defer src="i18n.js"></script>
+  <script defer src="staff-orders.js"></script>
+  <script defer src="order.js"></script>
+  <script defer src="cloud-orders.js"></script>
+  <script defer src="menu-data.js"></script>
+  <script defer src="menu-image-data.js"></script>
+  <script defer src="catalog.js"></script>
+  <script defer src="renderer-app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" type="button" data-tab="ghori" aria-label="Karak Ghori">
+        <img class="brand-mark" src="assets/karak-ghori-mark.png" alt="">
+        <span class="brand-name">KARAK <b>GHORI</b><small>Freshly made, warmly served</small></span>
+      </button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-button" type="button" data-tab="ghori">Ghori</button>
+        <button class="nav-button" type="button" data-tab="home">Home</button>
+        <button class="nav-button" type="button" data-tab="menu">Menu</button>
+        <button class="nav-button cart-nav" type="button" data-tab="cart">Cart <span id="cart-count" class="count-badge hidden">0</span></button>
+        <button class="nav-button" type="button" data-tab="staff">Staff</button>
+      </nav>
+      <button class="search-shortcut" type="button" data-tab="search" aria-label="Search menu"><span aria-hidden="true">⌕</span><kbd>Search</kbd></button>
+      <button class="language-toggle" type="button" data-action="language" aria-label="Switch language">عربي</button>
+    </header>
+    <main id="app-main" tabindex="-1"></main>
+    <footer class="app-footer">
+      <span id="footer-made-fresh">Made fresh for you</span>
+      <span id="footer-price-label">Prices shown are samples; confirm with staff.</span>
+      <nav class="footer-legal" aria-label="Legal">
+        <a id="privacy-link" href="privacy-policy.html">Privacy policy</a>
+        <span aria-hidden="true">·</span>
+        <a id="terms-link" href="terms-conditions.html">Terms and conditions</a>
+      </nav>
+    </footer>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
